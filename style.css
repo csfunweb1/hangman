@@ -1,0 +1,22 @@
+body {
+  font-family: "Architects Daughter", cursive;
+  background-color: #E8E8E8;
+}
+h1 {
+  font-size: 2em;
+  color: #0353A4;
+}
+#dashes {
+  font-size: 2em;
+  color: #002855;
+}
+table {
+  width: 50%;
+  height: 50%;
+  border: 2px solid #0353A4;
+  font-size: 1.2em;
+  color: #0466C8;
+}
+td {
+  text-align: center;
+}
