@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hangman</title>
+    <title>Hangman (colors)</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap"
       rel="stylesheet"
@@ -14,10 +14,13 @@
   <body>
     <center>
       <h1>
-        HANGMAN
+        HANGMAN (COLORS)
       </h1>
       <div id="dashes">
         _ _ _ _ _ _ _ _ _ _ _ _ _ _
+      </div>
+      <div id = "debug">
+        
       </div>
       <br />
       <div id="hangedMan">
@@ -28,42 +31,13 @@
       </div>
       <br />
 
-      <table>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>C</td>
-          <td>D</td>
-          <td>E</td>
-          <td>F</td>
-          <td>G</td>
-          <td>H</td>
-          <td>I</td>
-          <td>J</td>
-          <td>K</td>
-          <td>L</td>
-          <td>M</td>
-        </tr>
-        <tr>
-          <td>N</td>
-          <td>O</td>
-          <td>P</td>
-          <td>Q</td>
-          <td>R</td>
-          <td>S</td>
-          <td>T</td>
-          <td>U</td>
-          <td>V</td>
-          <td>W</td>
-          <td>X</td>
-          <td>Y</td>
-          <td>Z</td>
-        </tr>
-      </table>
-
+      <div id = "keyboard">
+      </div>
       <br />
       <input type="button" onclick="strike()" value="Strike!" />
       <input type="button" onclick="reset()" value="RESET" />
+      <input type="button" onclick="dashMaker()" value="Dash Maker" />
+      <input type="button" onclick="multiIndexOf('a')" value="Index Checker"/>
     </center>
   </body>
 </html>
