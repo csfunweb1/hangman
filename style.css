@@ -19,4 +19,11 @@ table {
 }
 td {
   text-align: center;
+  cursor: pointer;
 }
+.out{
+  color: #7D8597;
+  text-decoration: line-through;
+}
+
+
