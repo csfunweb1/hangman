@@ -1,7 +1,11 @@
 //still problematic
 var strikeCounter = 0;
 var mistakes = 0;
-var wordArray = ["azure", "turquoise", "crimson", "teal", "fuchsia", "aquamarine", "beige", "lilac", "maroon", "burgundy", "coral", "ebony"];
+var wordArray = [
+  "pilaf", "torta", "misosoup", "baklava", "fries", "pizza", "pudding", "springrolls", "sandwhich", "guacamole", "barbecue", "tofu",
+"noodles", "spaghetti", "borscht", "waffles", "pavlova", "naan", "churros", "bulgogi", "taco", "nachos", "quesadillas", "burritos", 
+"biryani", "cheddar", "baguette", "pretzel", "croissant", "curry", "sushi", "tempura", "cookies", "cake", "icecream", "cheeseburger",
+"milkshake", "eggs", "bacon", "kimchi", "fajitas", "quiche", "fudge"];
 var letterArray = [];
 var keyboardHTML = `
                   <table>
@@ -51,7 +55,6 @@ var imageUrls = [
 
 function strike() {
   mistakes++
-  alert(mistakes)
   var imageUrl = imageUrls[strikeCounter];
   document.getElementById("hangedMan").innerHTML =
     "<img src = " + imageUrl + ' height = "500px">';
@@ -78,7 +81,6 @@ function reset() {
 function chooseWord(){
   var randNum = Math.floor(Math.random()*wordArray.length) 
   var word = wordArray[randNum];
-  document.getElementById("debug").innerHTML = word;
   return word;
 }
 function dashMaker(){
@@ -99,8 +101,7 @@ function makeGuess(alphabet){
   if (alphaIndices.length == 0){
     strike()
     if (isGameOver()){
-      alert("Game Over");
-      reset();
+      setTimeout(function(){ alert("Game Over, the word is "+letterArray.join(''));reset(); }, 100);
       return;
     }
   }
